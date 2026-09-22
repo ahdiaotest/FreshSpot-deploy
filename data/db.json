@@ -1,0 +1,134 @@
+{
+  "places": [
+    {
+      "id": "p1",
+      "name": "Ah Ma Banana Cake",
+      "nameCn": "阿嬷香蕉糕",
+      "category": "dessert",
+      "area": "Taman Molek"
+    },
+    {
+      "id": "p2",
+      "name": "Restoran Lim Bak Kut Teh",
+      "nameCn": "林记肉骨茶",
+      "category": "food",
+      "area": "Jalan Wong Ah Fook"
+    },
+    {
+      "id": "p3",
+      "name": "Sparkle Car Wash",
+      "nameCn": "闪亮洗车",
+      "category": "carwash",
+      "area": "Bukit Indah"
+    },
+    {
+      "id": "p4",
+      "name": "Zen Massage House",
+      "nameCn": "禅意按摩馆",
+      "category": "massage",
+      "area": "Mount Austin"
+    },
+    {
+      "id": "p5",
+      "name": "Kopi Ori Cafe",
+      "nameCn": "原味咖啡",
+      "category": "cafe",
+      "area": "JB Town"
+    },
+    {
+      "id": "p6",
+      "name": "Uncle Ong Char Kway Teow",
+      "nameCn": "王叔炒粿条",
+      "category": "food",
+      "area": "Larkin"
+    },
+    {
+      "id": "p7",
+      "name": "Sweet Bean Dessert",
+      "nameCn": "甜豆甜品",
+      "category": "dessert",
+      "area": "Permas Jaya"
+    },
+    {
+      "id": "p8",
+      "name": "QuickShine Auto Spa",
+      "nameCn": "快亮汽车护理",
+      "category": "carwash",
+      "area": "Skudai"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "s1",
+      "placeId": "p1",
+      "statusType": "sold_out",
+      "note": "Banana cake sold out until tomorrow morning",
+      "createdAt": "2026-09-14T11:40:37.739Z",
+      "expiresAt": "2026-09-14T11:55:37.739Z"
+    },
+    {
+      "id": "s2",
+      "placeId": "p2",
+      "statusType": "queue_wait",
+      "note": "~25 min wait, 8 tables ahead",
+      "createdAt": "2026-09-14T11:42:37.739Z",
+      "expiresAt": "2026-09-14T11:57:37.739Z"
+    },
+    {
+      "id": "s3",
+      "placeId": "p4",
+      "statusType": "open_slots",
+      "note": "2 therapists free now — walk-in OK",
+      "createdAt": "2026-09-14T11:43:37.739Z",
+      "expiresAt": "2026-09-14T11:58:37.739Z"
+    },
+    {
+      "id": "s4",
+      "placeId": "p3",
+      "statusType": "queue_wait",
+      "note": "3 cars in line",
+      "createdAt": "2026-09-14T11:37:37.739Z",
+      "expiresAt": "2026-09-14T11:52:37.739Z"
+    },
+    {
+      "id": "s5",
+      "placeId": "p6",
+      "statusType": "custom",
+      "note": "Special: chilli padi version today only",
+      "createdAt": "2026-09-14T11:44:37.739Z",
+      "expiresAt": "2026-09-14T11:59:37.739Z"
+    }
+  ],
+  "vouchers": [
+    {
+      "id": "v1",
+      "merchant": "Ah Ma Banana Cake",
+      "code": "BANANA2FREE",
+      "note": "Buy 1 get 1 free — unused next order",
+      "expiry": null,
+      "status": "open",
+      "createdAt": "2026-09-14T10:45:37.739Z",
+      "claimedAt": null
+    },
+    {
+      "id": "v2",
+      "merchant": "Sparkle Car Wash",
+      "code": "WASH20OFF",
+      "note": "RM20 off exterior wash",
+      "expiry": "2026-09-21T11:45:37.739Z",
+      "status": "open",
+      "createdAt": "2026-09-14T09:45:37.739Z",
+      "claimedAt": null
+    },
+    {
+      "id": "v3",
+      "merchant": "Zen Massage House",
+      "code": "ZEN30",
+      "note": "30% off 60-min session",
+      "expiry": "2026-09-17T11:45:37.739Z",
+      "status": "open",
+      "createdAt": "2026-09-14T11:15:37.739Z",
+      "claimedAt": null
+    }
+  ]
+}
