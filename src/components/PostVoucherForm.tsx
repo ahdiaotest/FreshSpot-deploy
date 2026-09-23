@@ -9,7 +9,7 @@ export function PostVoucherForm({
   onDone: () => void;
   onCancel: () => void;
 }) {
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [step, setStep] = useState<1 | 2>(1);
   const [merchant, setMerchant] = useState("");
   const [code, setCode] = useState("");
   const [note, setNote] = useState("");
@@ -57,7 +57,7 @@ export function PostVoucherForm({
           </button>
         </div>
 
-        <p className="mb-3 text-xs text-stone-400">Step {step}/3</p>
+        <p className="mb-3 text-xs text-stone-400">Step {step}/2</p>
 
         {step === 1 && (
           <div className="space-y-3">
@@ -108,6 +108,7 @@ export function PostVoucherForm({
                 className="mt-1 w-full rounded-xl border border-stone-200 px-3 py-2 text-sm outline-none focus:border-violet-500"
               />
             </label>
+            {err && <p className="text-xs text-rose-600">{err}</p>}
             <div className="flex gap-2">
               <button
                 type="button"
@@ -118,59 +119,11 @@ export function PostVoucherForm({
               </button>
               <button
                 type="button"
-                disabled={!code.trim()}
-                onClick={() => setStep(3)}
+                disabled={!code.trim() || busy}
+                onClick={submit}
                 className="flex-1 rounded-xl bg-violet-600 py-2.5 text-sm font-semibold text-white disabled:opacity-40"
               >
-                Next · 下一步
-              </button>
-            </div>
-          </div>
-        )}
-
-        {step === 3 && (
-          <div className="space-y-3">
-            <p className="text-sm font-medium text-stone-700">
-              3. Confirm · 确认提交
-            </p>
-            <div className="rounded-xl bg-stone-50 p-3 text-sm text-stone-700">
-              <p>
-                <span className="text-stone-400">Merchant: </span>
-                {merchant}
-              </p>
-              <p className="mt-1">
-                <span className="text-stone-400">Code: </span>
-                <span className="font-mono">{code}</span>
-              </p>
-              {note && (
-                <p className="mt-1">
-                  <span className="text-stone-400">Note: </span>
-                  {note}
-                </p>
-              )}
-              {expiry && (
-                <p className="mt-1">
-                  <span className="text-stone-400">Expiry: </span>
-                  {expiry}
-                </p>
-              )}
-            </div>
-            {err && <p className="text-xs text-rose-600">{err}</p>}
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={() => setStep(2)}
-                className="flex-1 rounded-xl border border-stone-200 py-2.5 text-sm font-medium"
-              >
-                Back · 返回
-              </button>
-              <button
-                type="button"
-                disabled={busy}
-                onClick={submit}
-                className="flex-1 rounded-xl bg-violet-600 py-2.5 text-sm font-semibold text-white disabled:opacity-50"
-              >
-                {busy ? "Posting…" : "Post · 发布 · Kongsi"}
+                {busy ? "Posting…" : "Post · 发布"}
               </button>
             </div>
           </div>
